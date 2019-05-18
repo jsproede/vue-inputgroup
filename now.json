@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "name": "vue-inputgroup",
+  "alias": ["vue-inputgroup.now.sh"],
+  "builds": [
+    {
+      "src": "./package.json",
+      "use": "@now/static-build",
+      "config": {
+        "distDir": "demo"
+      }
+    }
+  ],
+  "routes": [
+    { "src": "^/js/(.*)", "dest": "/demo/js/$1" },
+    { "src": "^/css/(.*)", "dest": "/demo/css/$1" },
+    { "src": "^/img/(.*)", "dest": "/demo/img/$1" },
+    { "src": ".*", "dest": "/demo/index.html" }
+  ]
+}

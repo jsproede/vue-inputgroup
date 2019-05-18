@@ -9,6 +9,7 @@
   "scripts": {
     "serve": "npm run build && vue-cli-service serve",
     "build": "vue-cli-service build --mode production --target lib --name inputgroup ./src/plugin.js && rm ./dist/demo.html",
+    "now-build": "yarn build && vue-cli-service build ./src/main.js --dest ./demo",
     "lint": "vue-cli-service lint"
   },
   "prettier": {
