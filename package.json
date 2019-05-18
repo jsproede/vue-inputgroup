@@ -1,0 +1,55 @@
+{
+  "name": "vue-inputgroup",
+  "version": "1.0.0",
+  "description": "A Vue.js plugin/component which splits a input into multiple groups",
+  "author": "Jens Sproede <jens@jenssproede.de>",
+  "repository": {
+    "url": ""
+  },
+  "scripts": {
+    "serve": "npm run build && vue-cli-service serve",
+    "build": "vue-cli-service build --mode production --target lib --name inputgroup ./src/plugin.js && rm ./dist/demo.html",
+    "lint": "vue-cli-service lint"
+  },
+  "prettier": {
+    "singleQuote": true
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "@vue/prettier"
+    ],
+    "rules": {
+      "no-console": 0
+    }
+  },
+  "lint-staged": {
+    "./src/*.{js,vue}": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  },
+  "browser": "dist/paintable.common.js",
+  "unpkg": "dist/paintable.umd.min.js",
+  "files": [
+    "dist/paintable.common.js",
+    "dist/paintable.umd.min.js",
+    "dist/paintable.umd.js"
+  ],
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.7.0",
+    "@vue/cli-plugin-eslint": "^3.7.0",
+    "@vue/cli-service": "^3.7.0",
+    "@vue/eslint-config-prettier": "^4.0.1",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.2.2",
+    "lint-staged": "^8.1.7",
+    "vue": "^2.6.10",
+    "vue-template-compiler": "^2.6.10"
+  }
+}
